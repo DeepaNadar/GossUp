@@ -1,5 +1,5 @@
 # GossUp - Flutter Firebase Chat App with Google Sign-in
-### This Flutter app allows users to sign in using their Google account and interact with other users through a chat interface. The app utilizes Firebase for authentication, real-time messaging, and storage. <br/>
+This Flutter app allows users to sign in using their Google account and interact with other users through a chat interface. The app utilizes Firebase for authentication, real-time messaging, and storage. <br/>
 ## Features: <br/>
 1. **Google Sign-In**: Users can log in using their Google accounts for a seamless authentication process.
 1. **Home Screen**: Upon logging in, users are greeted with a home screen. The app bar in the top-left corner features a "Logout" button that allows users to sign out.
