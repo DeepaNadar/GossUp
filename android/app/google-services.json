@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "693407250899",
+    "project_id": "frenzygram-fa689",
+    "storage_bucket": "frenzygram-fa689.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693407250899:android:f757e4f9c510138b585726",
+        "android_client_info": {
+          "package_name": "com.example.frenzygram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693407250899-169t35hpi0ngjo1stoujfifcs06nsc6f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.frenzygram",
+            "certificate_hash": "87fb547c52c1a966b5d290c4cc36fbc18653525c"
+          }
+        },
+        {
+          "client_id": "693407250899-1pspu06ppvhrm5s31kdq9gupbgfv4tdh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCThkO0fWaWK9yW6GvlsZWY_sGHuwyH2Jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693407250899-1pspu06ppvhrm5s31kdq9gupbgfv4tdh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "693407250899-dm0ru2q6sj0qbcrn5d7d702u8m95pfaj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.frenzygram"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
