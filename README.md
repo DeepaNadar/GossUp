@@ -11,11 +11,12 @@
 1. **Online Status**: The app displays users' last seen status and indicates whether they are currently online.
 1. **Push Notifications**: The app utilizes Firebase Cloud Messaging (FCM) REST API to deliver push notifications. Users receive notifications even when the app is closed, ensuring timely message alerts.
 ## Screenshots:
-![GossUp1](https://github.com/d33pa-n/GossUp/assets/141585733/21ac39c5-8e64-43d8-aba9-5153bc07776f) ![GossUp2](https://github.com/d33pa-n/GossUp/assets/141585733/29867bc9-a381-4572-bea1-e58441f3c702) ![GossUp3](https://github.com/d33pa-n/GossUp/assets/141585733/6a9da383-8cbb-45cc-9f50-24ca8ff234ab)
-![GossUp4](https://github.com/d33pa-n/GossUp/assets/141585733/797178fc-22d1-4cb0-a13c-0677e2d19b7c) ![GossUp5](https://github.com/d33pa-n/GossUp/assets/141585733/015eeb16-917c-4b83-b201-49d01d36c908) ![GossUp6](https://github.com/d33pa-n/GossUp/assets/141585733/6c4ab963-b847-46cc-8855-d78a71c3f862)
-![GossUp7](https://github.com/d33pa-n/GossUp/assets/141585733/948c73fe-0f0f-464f-9a95-7ae0b69d7add) ![GossUp8](https://github.com/d33pa-n/GossUp/assets/141585733/60688b49-b02d-4ae4-80ac-03dcf76a2bfd) ![GossUp9](https://github.com/d33pa-n/GossUp/assets/141585733/98b287c6-e584-4f89-bc44-285626ca00d9)
-![GossUp10](https://github.com/d33pa-n/GossUp/assets/141585733/fe75487c-90d3-427b-8afb-8a88d1de6622) ![GossUp11](https://github.com/d33pa-n/GossUp/assets/141585733/020038d1-59ad-4eb9-9889-14b56b35cf13)
-
+![GossUp1](https://github.com/DeepaNadar/GossUp/assets/141585733/c32a229e-90a9-4cb9-8472-3e1c8f16c4a2) ![GossUp2](https://github.com/DeepaNadar/GossUp/assets/141585733/bb10bc4b-c95a-4ee4-8481-8d6e80fd83c2)
+![GossUp3](https://github.com/DeepaNadar/GossUp/assets/141585733/157bc653-5617-4296-95fd-220e00b409aa) ![GossUp4](https://github.com/DeepaNadar/GossUp/assets/141585733/4625c5ac-a035-4dea-9590-e42e812b904d)
+![GossUp5](https://github.com/DeepaNadar/GossUp/assets/141585733/1e9f22c1-57ec-4958-8469-f35b4c004e13) ![GossUp6](https://github.com/DeepaNadar/GossUp/assets/141585733/3462e3ea-8f7e-4429-8cdb-7e0383ab2e46)
+![GossUp7](https://github.com/DeepaNadar/GossUp/assets/141585733/1321dfab-46cc-4944-b29c-41bfa4a759a5) ![GossUp8](https://github.com/DeepaNadar/GossUp/assets/141585733/2697f160-57f7-4903-bfeb-6a238371d6d1)
+![GossUp9](https://github.com/DeepaNadar/GossUp/assets/141585733/3bdbb957-2217-4962-8caa-b65beef465b9) ![GossUp10](https://github.com/DeepaNadar/GossUp/assets/141585733/7a12373d-2088-4fe6-9e74-9ba15e7875d6)
+![GossUp11](https://github.com/DeepaNadar/GossUp/assets/141585733/ea142464-887f-4149-92ec-0ec644c06e81)
 ## Dependencies:
 - [firebase_core](https://pub.dev/packages/firebase_core): ^2.15.0
 - [firebase_auth](https://pub.dev/packages/firebase_auth): ^4.7.2
