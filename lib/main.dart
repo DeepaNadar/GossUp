@@ -52,8 +52,7 @@ class MyApp extends StatelessWidget {
 
             return isLoggedIn ? HomeScreen() : LoginScreen();
           } else {
-            // Handle the case where there's no data or the data is null
-            return LoginScreen(); // For example, show the login screen by default
+            return LoginScreen(); 
           }
         },
       ),
