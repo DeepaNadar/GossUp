@@ -6,10 +6,11 @@ import 'package:flutter_notification_channel/flutter_notification_channel.dart';
 import 'package:flutter_notification_channel/notification_importance.dart';
 import 'package:frenzygram/screens/auth/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:frenzygram/screens/home_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'firebase_options.dart';
 
-
-late Size mq; //Global object for accessing screen size   
+late Size mq; //Global object for accessing screen size
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,12 +20,13 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Color.fromARGB(255, 152, 61, 89),
-      statusBarIconBrightness: Brightness.light,));
+      statusBarIconBrightness: Brightness.light,
+    ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GossUp',
@@ -33,22 +35,33 @@ class MyApp extends StatelessWidget {
           elevation: 3,
           iconTheme: IconThemeData(color: Colors.white),
           centerTitle: true,
-        titleTextStyle:TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.normal,
-          fontSize: 19
-          ),
-        backgroundColor: Color.fromARGB(255, 152, 61, 89),
+          titleTextStyle: TextStyle(
+              color: Colors.white, fontWeight: FontWeight.normal, fontSize: 19),
+          backgroundColor: Color.fromARGB(255, 152, 61, 89),
         ),
-        
         primarySwatch: Colors.pink,
       ),
-      home: const LoginScreen()
+      home: FutureBuilder(
+        future: SharedPreferences.getInstance(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return CircularProgressIndicator();
+          }
+          if (snapshot.hasData && snapshot.data != null) {
+            bool isLoggedIn = snapshot.data!.getBool('isLoggedIn') ?? false;
+
+            return isLoggedIn ? HomeScreen() : LoginScreen();
+          } else {
+            // Handle the case where there's no data or the data is null
+            return LoginScreen(); // For example, show the login screen by default
+          }
+        },
+      ),
     );
   }
 }
 
-_initializeFirebase() async{
+_initializeFirebase() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   var result = await FlutterNotificationChannel.registerNotificationChannel(
@@ -56,9 +69,6 @@ _initializeFirebase() async{
     id: 'chats',
     importance: NotificationImportance.IMPORTANCE_HIGH,
     name: 'Chats',
-    
-);
-log("\nNotification Channel Result: $result");
+  );
+  log("\nNotification Channel Result: $result");
 }
-
-

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../api/api.dart';
 import '../../helper/dialogs.dart';
 import '../../main.dart';
@@ -23,6 +24,11 @@ class _LoginScreenState extends State<LoginScreen> {
     _signInWithGoogle().then((user) async {
 
       Navigator.pop(context);
+
+       if (user != null) {
+        SharedPreferences prefs = await SharedPreferences.getInstance();
+        prefs.setBool('isLoggedIn', true);
+       }
 
       if (user != null) {
         log('\nUser: ${user.user}');
